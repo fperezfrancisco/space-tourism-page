@@ -357,7 +357,7 @@ html {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   max-width: 600px;
 }
 
@@ -559,6 +559,10 @@ html {
   .destinationPage {
     background-image: url("./assets/destination/background-destination-tablet.jpg");
   }
+
+  .crewPage {
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -667,9 +671,70 @@ html {
     column-gap: 2.5rem;
     align-items: center;
   }
+
+  /* crew page*/
+
+  .crewMainContainer {
+    width: 100vw;
+    padding: 2rem;
+    padding-bottom: 0rem;
+  }
+
+  .crewInnerContainer {
+    row-gap: 0rem;
+  }
+
+  .crewInnerContainer .copyGridBox {
+    margin-bottom: 2rem;
+  }
+
+  .crewArtGridBox {
+    grid-row: 3;
+    padding: 0px;
+    width: 100%;
+    max-height: 600px;
+    min-height: 500px;
+    border: none;
+  }
+
+  .crewArtGridBox img {
+    height: 572px;
+    width: auto;
+  }
+
+  .crewInnerNav {
+    padding-top: 3rem;
+    order: 3;
+  }
 }
 
 @media only screen and (min-width: 900px) {
+  .heading1 {
+    font-size: 9.375rem;
+    text-transform: uppercase;
+  }
+
+  .heading2 {
+    font-size: 6.25rem;
+    text-transform: uppercase;
+  }
+
+  .heading3 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+  }
+
+  .heading4 {
+    font-size: 2rem;
+  }
+
+  .heading5 {
+    letter-spacing: 2.7px;
+    font-size: 1.33rem;
+    color: var(--light-blue);
+    text-transform: uppercase;
+  }
+
   .navNumber {
     display: inline-block;
   }
@@ -680,6 +745,10 @@ html {
 
   .destinationPage {
     background-image: url("./assets/destination/background-destination-desktop.jpg");
+  }
+
+  .crewPage {
+    background-image: url("./assets/crew/background-crew-desktop.jpg");
   }
 
   .topBar {
@@ -790,5 +859,50 @@ html {
   .destiInnerContainer .artGridBox img {
     width: 400px;
     height: 400px;
+  }
+
+  /* crew styling */
+
+  .crewPage {
+    min-height: 500px;
+  }
+
+  .crewPage .topBar {
+    margin-bottom: 0px;
+  }
+
+  .crewInnerContainer {
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    column-gap: 2rem;
+  }
+
+  .crewInnerContainer .titleGridBox {
+    max-width: 1000px;
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .crewInnerContainer .copyGridBox {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+  }
+
+  .crewInnerContainer .artGridBox {
+    padding: 0px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .crewInnerContainer .artGridBox img {
+    width: auto;
+    height: auto;
+  }
+
+  .crewInnerContainer .crewArtGridBox {
+    width: 100%;
+    height: 70vh;
+    min-height: 50px;
+    max-height: 750px;
   }
 }
